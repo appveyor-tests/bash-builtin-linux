@@ -16,11 +16,11 @@ test_script:
 - sh: |
     RED='\033[0;31m'
     NC='\033[0m'
-    if [ $STATUS == "OFF" ] && set -o |grep -Pq 'xtrace\s+on'; then
+    if [ "$STATUS" = "OFF" ] && set -o |grep -Pq 'xtrace\s+on'; then
       echo -e "${RED}Bash builtins survive between command calls!${NC}"
       return 1
     fi
-    if [ $STATUS == "ON" ] && set -o |grep -Pq 'xtrace\s+off'; then
+    if [ "$STATUS" = "ON" ] && set -o |grep -Pq 'xtrace\s+off'; then
       echo -e "${RED}Bash builtins survive between command calls!${NC}"
       return 1
     fi
