@@ -5,6 +5,7 @@ init:
 
 build: off
 test_script:
+- sh: bash pac.sh
 - sh: |
     if set -o |grep -Pq 'xtrace\s+off'; then
       set -x
