@@ -4,6 +4,7 @@ init:
 - appveyor version
 - cat /etc/hosts
 - ls /etc/netplan
+- cat /etc/netplan/01-netcfg.yaml
 
 build: off
 test_script:
