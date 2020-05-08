@@ -3,6 +3,7 @@ image: ubuntu
 init:
 - appveyor version
 - cat /etc/hosts
+- ls /etc/netplan
 
 build: off
 test_script:
