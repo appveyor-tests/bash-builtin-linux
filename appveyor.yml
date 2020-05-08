@@ -2,6 +2,7 @@ image: ubuntu
 
 init:
 - appveyor version
+- cat /etc/hosts
 
 build: off
 test_script:
